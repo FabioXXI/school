@@ -1,6 +1,6 @@
 from cv2 import imread, imwrite
 from numpy import mean
-import asyncio
+from asyncio import run
 from time import time
 
 async def p(i):
@@ -12,4 +12,4 @@ async def main():
     imwrite('o.jpg', await p(i))
     print(time() - s)
 
-asyncio.run(main())
+run(main())
