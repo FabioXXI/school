@@ -11,12 +11,10 @@ def t(r, g, b):
 def p(m):
     w, c, _ = m.shape
     y = empty((w, c), dtype=float32)
-    
     for i in range(w):
         for j in range(c):
             r, g, b = m[i, j]
             y[i, j] = t(r, g, b)
-    
     return y
 
 s = time()
