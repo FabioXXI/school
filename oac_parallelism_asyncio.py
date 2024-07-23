@@ -10,6 +10,7 @@ async def main():
     s = time()
     i = imread('./c.jpg')
     imwrite('o.jpg', await p(i))
-    print(time() - s)
+    e = time() - s
+    print(e)
 
 run(main())
