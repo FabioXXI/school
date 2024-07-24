@@ -24,17 +24,12 @@ def converta_para_cinza(image_array):
     return imagem_cinza
 
 def imprime_figura():
-    # Converte a imagem para numpy array
-    image_array = np.array(imagem_1)
-    
-    # Converte para escala de cinza usando Numba
-    gray_image_array = converta_para_cinza(image_array)
-    
-    # Converte de volta para imagem PIL e mostra
-    imagem_cinza = Image.fromarray(gray_image_array)
+    imagem_array = np.array(imagem_1)
+    imagem_cinza_array = converta_para_cinza(imagem_array)
+    imagem_cinza = Image.fromarray(imagem_cinza_array)
     imagem_cinza.show()
 
 inicio = time.time()
 imprime_figura()
 fim = time.time()
-print("Tempo de Processamento:", fim - inicio, "segundos")
+print(fim - inicio)
